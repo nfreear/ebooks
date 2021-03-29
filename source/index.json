@@ -1,0 +1,15 @@
+{
+  "summary": "Index of e-Book sources.",
+
+  "index": [
+    {
+      "title": "IIf—, by Rudyard Kipling",
+      "file": "if.md",
+      "source": "https://www.poetryfoundation.org/poems/46473/if---"
+    }, {
+      "title": "Serenity Prayer",
+      "file": "serenity-prayer.md",
+      "source": "..."
+    }
+  ]
+}

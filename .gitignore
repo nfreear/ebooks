@@ -1,0 +1,27 @@
+
+.env
+
+*.py
+python
+calibre
+--verbose
+
+.DS_Store
+
+node_modules
+# package-lock.json
+*BAK*
+dist
+temp
+test
+*.log
+*.epub
+*.html
+*.pdf
+*.txt
+*.zip
+
+*-harrison*
+*-jftna*
+
+# End.

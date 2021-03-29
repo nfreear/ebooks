@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "name": "@nfreear/ebooks",
+  "version": "0.8.0-beta",
+  "description": "A collection of E-Books (09-Nov-2020)",
+  "license": "UNLICENSED",
+  "repository": "https://github.com/nfreear/ebooks.git",
+  "main": null,
+  "scripts": {
+    "build": "node lib/index.js",
+    "test": "echo 'Not yet implemented'",
+    "set-macos-link": "cd ./node_modules/.bin; ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert",
+    "set-macos-path": "PATH=$PATH:/Applications/calibre.app/Contents/MacOS",
+    "version": "ebook-convert --version",
+    "zip": "zip ../ebook-repo.zip -r . -x node_modules/**\\* -x .git/**\\* && ls -lh ../*.zip"
+  },
+  "engines": {
+    "node": ">=12",
+    "python": ""
+  },
+  "devDependencies": {
+    "ebook-convert": "^2.0.1",
+    "husky": "^4.3.0"
+  },
+  "peerDependencies": {
+    "linux:py:calibre": "https://github.com/kovidgoyal/calibre/releases/download/v5.4.2/calibre-5.4.2-x86_64.txz"
+  },
+  "husky": {
+    "hooks": {
+      "XY-commit-msg": "echo $HUSKY_GIT_PARAMS && exit 1",
+      "XX-commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
